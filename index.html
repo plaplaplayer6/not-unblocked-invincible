@@ -9,58 +9,59 @@
     body {
       margin: 0;
       background: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
     }
 
-    iframe {
-      width: 100%;
-      height: 100vh;
+    h2 {
+      margin: 20px 0;
+    }
+
+    .grid {
+      padding: 20px;
+    }
+
+    button {
+      margin: 8px;
+      padding: 12px 18px;
+      background: #333;
+      color: white;
       border: none;
-      margin-bottom: 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #555;
     }
   </style>
 </head>
 
 <body>
 
-  <iframe
-    src="https://vidcore.net/tv/tt6741278/1/1"
-    allowfullscreen>
-  </iframe>
+  <h2>Invincible - Episodes</h2>
 
-  <iframe
-    src="https://vidcore.net/tv/tt6741278/1/2"
-    allowfullscreen>
-  </iframe>
+  <div class="grid">
 
-  <iframe
-    src="https://vidcore.net/tv/tt6741278/1/3"
-    allowfullscreen>
-  </iframe>
+    <button onclick="openEp(1)">Episode 1</button>
+    <button onclick="openEp(2)">Episode 2</button>
+    <button onclick="openEp(3)">Episode 3</button>
+    <button onclick="openEp(4)">Episode 4</button>
+    <button onclick="openEp(5)">Episode 5</button>
+    <button onclick="openEp(6)">Episode 6</button>
+    <button onclick="openEp(7)">Episode 7</button>
+    <button onclick="openEp(8)">Episode 8</button>
 
-  <iframe
-    src="https://vidcore.net/tv/tt6741278/1/4"
-    allowfullscreen>
-  </iframe>
+  </div>
 
-  <iframe
-    src="https://vidcore.net/tv/tt6741278/1/5"
-    allowfullscreen>
-  </iframe>
-  
-    <iframe
-    src="https://vidcore.net/tv/tt6741278/1/6"
-    allowfullscreen>
-  </iframe>
+  <script>
+    const base = "https://vidcore.net/tv/tt6741278/1/";
 
-    <iframe
-    src="https://vidcore.net/tv/tt6741278/1/7"
-    allowfullscreen>
-  </iframe>
-
-    <iframe
-    src="https://vidcore.net/tv/tt6741278/1/8"
-    allowfullscreen>
-  </iframe>
+    function openEp(ep) {
+      window.open(base + ep, "_blank");
+    }
+  </script>
 
 </body>
 </html>
