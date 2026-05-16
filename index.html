@@ -106,4 +106,37 @@
   </script>
 
 </body>
+  <body>
+
+  <div class="overlay">
+
+    <div class="header">
+      <!-- Title image -->
+      <div class="season">Season 2</div>
+    </div>
+
+    <div class="grid">
+
+      <div class="ep" onclick="openEp(1)">Episode 1</div>
+      <div class="ep" onclick="openEp(2)">Episode 2</div>
+      <div class="ep" onclick="openEp(3)">Episode 3</div>
+      <div class="ep" onclick="openEp(4)">Episode 4</div>
+      <div class="ep" onclick="openEp(5)">Episode 5</div>
+      <div class="ep" onclick="openEp(6)">Episode 6</div>
+      <div class="ep" onclick="openEp(7)">Episode 7</div>
+      <div class="ep" onclick="openEp(8)">Episode 8</div>
+
+    </div>
+
+  </div>
+
+  <script>
+    const base = "https://vidcore.net/tv/tt6741278/2/";
+
+    function openEp(ep) {
+      window.open(base + ep, "_blank");
+    }
+  </script>
+
+</body>
 </html>
