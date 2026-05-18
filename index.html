@@ -1,8 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invincible</title>
+
+  <style>
+    :root {
+      --bg-image: url("rewds.avif");
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: white;
+      background: var(--bg-image) center/cover no-repeat fixed;
+    }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.75);
+      min-height: 100vh;
+      padding-bottom: 40px;
+    }
+
+    .header {
+      padding: 30px 20px 10px;
+      text-align: center;
+    }
+
+    .title-img {
+      width: 280px;
+      max-width: 80%;
+      height: auto;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .season {
+      margin-top: 10px;
+      margin-left: 20px;
+      color: #aaa;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .ep {
+      background: rgba(20, 20, 25, 0.85);
+      border: 1px solid #2a2a35;
+      border-radius: 10px;
+      padding: 15px;
+      cursor: pointer;
+      text-align: center;
+      transition: 0.2s;
+    }
+
+    .ep:hover {
+      transform: scale(1.05);
+      background: rgba(40, 40, 50, 0.9);
+    }
+  </style>
+</head>
+
 <body>
 
   <div class="overlay">
 
-    <!-- HEADER -->
+    <!-- TITLE -->
     <div class="header">
       <img class="title-img" src="invincible title.png" alt="Invincible">
     </div>
@@ -11,63 +81,66 @@
     <div class="season">Season 1</div>
 
     <div class="grid">
-      <div class="ep" onclick="openS1(1)">Episode 1</div>
-      <div class="ep" onclick="openS1(2)">Episode 2</div>
-      <div class="ep" onclick="openS1(3)">Episode 3</div>
-      <div class="ep" onclick="openS1(4)">Episode 4</div>
-      <div class="ep" onclick="openS1(5)">Episode 5</div>
-      <div class="ep" onclick="openS1(6)">Episode 6</div>
-      <div class="ep" onclick="openS1(7)">Episode 7</div>
-      <div class="ep" onclick="openS1(8)">Episode 8</div>
+      <div class="ep" onclick="openSeason(1,1)">Episode 1</div>
+      <div class="ep" onclick="openSeason(1,2)">Episode 2</div>
+      <div class="ep" onclick="openSeason(1,3)">Episode 3</div>
+      <div class="ep" onclick="openSeason(1,4)">Episode 4</div>
+      <div class="ep" onclick="openSeason(1,5)">Episode 5</div>
+      <div class="ep" onclick="openSeason(1,6)">Episode 6</div>
+      <div class="ep" onclick="openSeason(1,7)">Episode 7</div>
+      <div class="ep" onclick="openSeason(1,8)">Episode 8</div>
     </div>
 
     <!-- SEASON 2 -->
-    <div class="season" style="margin-top: 10px;">Season 2</div>
+    <div class="season">Season 2</div>
 
     <div class="grid">
-      <div class="ep" onclick="openS2(1)">Episode 1</div>
-      <div class="ep" onclick="openS2(2)">Episode 2</div>
-      <div class="ep" onclick="openS2(3)">Episode 3</div>
-      <div class="ep" onclick="openS2(4)">Episode 4</div>
-      <div class="ep" onclick="openS2(5)">Episode 5</div>
-      <div class="ep" onclick="openS2(6)">Episode 6</div>
-      <div class="ep" onclick="openS2(7)">Episode 7</div>
-      <div class="ep" onclick="openS2(8)">Episode 8</div>
+      <div class="ep" onclick="openSeason(2,1)">Episode 1</div>
+      <div class="ep" onclick="openSeason(2,2)">Episode 2</div>
+      <div class="ep" onclick="openSeason(2,3)">Episode 3</div>
+      <div class="ep" onclick="openSeason(2,4)">Episode 4</div>
+      <div class="ep" onclick="openSeason(2,5)">Episode 5</div>
+      <div class="ep" onclick="openSeason(2,6)">Episode 6</div>
+      <div class="ep" onclick="openSeason(2,7)">Episode 7</div>
+      <div class="ep" onclick="openSeason(2,8)">Episode 8</div>
     </div>
 
-  </div>
-  
-      <!-- SEASON 3 -->
-    <div class="season" style="margin-top: 10px;">Season 3</div>
+    <!-- SEASON 3 -->
+    <div class="season">Season 3</div>
 
     <div class="grid">
-      <div class="ep" onclick="openS2(1)">Episode 1</div>
-      <div class="ep" onclick="openS2(2)">Episode 2</div>
-      <div class="ep" onclick="openS2(3)">Episode 3</div>
-      <div class="ep" onclick="openS2(4)">Episode 4</div>
-      <div class="ep" onclick="openS2(5)">Episode 5</div>
-      <div class="ep" onclick="openS2(6)">Episode 6</div>
-      <div class="ep" onclick="openS2(7)">Episode 7</div>
-      <div class="ep" onclick="openS2(8)">Episode 8</div>
+      <div class="ep" onclick="openSeason(3,1)">Episode 1</div>
+      <div class="ep" onclick="openSeason(3,2)">Episode 2</div>
+      <div class="ep" onclick="openSeason(3,3)">Episode 3</div>
+      <div class="ep" onclick="openSeason(3,4)">Episode 4</div>
+      <div class="ep" onclick="openSeason(3,5)">Episode 5</div>
+      <div class="ep" onclick="openSeason(3,6)">Episode 6</div>
+      <div class="ep" onclick="openSeason(3,7)">Episode 7</div>
+      <div class="ep" onclick="openSeason(3,8)">Episode 8</div>
+    </div>
+
+    <!-- SEASON 4 -->
+    <div class="season">Season 4</div>
+
+    <div class="grid">
+      <div class="ep" onclick="openSeason(4,1)">Episode 1</div>
+      <div class="ep" onclick="openSeason(4,2)">Episode 2</div>
+      <div class="ep" onclick="openSeason(4,3)">Episode 3</div>
+      <div class="ep" onclick="openSeason(4,4)">Episode 4</div>
+      <div class="ep" onclick="openSeason(4,5)">Episode 5</div>
+      <div class="ep" onclick="openSeason(4,6)">Episode 6</div>
+      <div class="ep" onclick="openSeason(4,7)">Episode 7</div>
+      <div class="ep" onclick="openSeason(4,8)">Episode 8</div>
     </div>
 
   </div>
 
   <script>
-    const base1 = "https://vidcore.net/tv/tt6741278/1/";
-    const base2 = "https://vidcore.net/tv/tt6741278/2/";
-    const base3 = "https://vidcore.net/tv/tt6741278/3/";
-
-    function openS1(ep) {
-      window.open(base1 + ep, "_blank");
-    }
-
-    function openS2(ep) {
-      window.open(base2 + ep, "_blank");
-    }
-        function openS2(ep) {
-      window.open(base2 + ep, "_blank");
+    function openSeason(season, ep) {
+      const url = `https://vidcore.net/tv/tt6741278/${season}/${ep}`;
+      window.open(url, "_blank");
     }
   </script>
 
 </body>
+</html>
